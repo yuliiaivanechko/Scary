@@ -7,43 +7,64 @@ public class PlayerMovement : MonoBehaviour
 {
 
     Vector2 moveInput;
-    Rigidbody2D rigidbody;
-    float runSpeed = 10f;
+    Rigidbody2D myRigidbody;
+    [SerializeField] float runSpeed = 2f;
+    [SerializeField] float jumpSpeed = 2f;
+    float myGravityScale = 0.0f;
 
     float scaleMultiplier = 0.3f;
     Vector2 scaleVector;
+    Animator myAnimator;
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
         ScalePlayer();
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Run();
+        Walk();
+        Jump();
         FlipSprite();
     }
 
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
     }
 
-    void Run()
+    void OnJump(InputValue value)
     {
-        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rigidbody.velocity.y);
-        rigidbody.velocity = playerVelocity;
+        if (value.isPressed)
+        {
+            myRigidbody.velocity += new Vector2(0f, jumpSpeed);
+        }
+    }
+
+    void Jump()
+    {
+        bool playerIsInTheAir = Mathf.Abs(myRigidbody.velocity.y) > 1.0f;
+        Debug.Log(myRigidbody.velocity.y);
+        myAnimator.SetBool("isJumping", playerIsInTheAir);
+    }
+
+    void Walk()
+    {
+        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
+        myRigidbody.velocity = playerVelocity;
+        bool playerHasSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        myAnimator.SetBool("IsWalking", playerHasSpeed);
     }
 
     void FlipSprite()
     {
-        bool playerHasSpeed = Mathf.Abs(rigidbody.velocity.x) > Mathf.Epsilon;
+        bool playerHasSpeed = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon) && (Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon);
         if (playerHasSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(rigidbody.velocity.x) * scaleVector.x, scaleVector.y);
+            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x) * scaleVector.x, scaleVector.y);
         }
     }
 
