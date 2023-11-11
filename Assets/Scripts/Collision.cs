@@ -10,6 +10,7 @@ public class Collision : MonoBehaviour
         if (other.gameObject.CompareTag("House"))
         {
             Debug.Log("Collided with a House object.");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         }
     }
 }
