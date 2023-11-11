@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         bool playerIsInTheAir = Mathf.Abs(myRigidbody.velocity.y) > 1.0f;
-        Debug.Log(myRigidbody.velocity.y);
         myAnimator.SetBool("isJumping", playerIsInTheAir);
     }
 
@@ -79,7 +78,5 @@ public class PlayerMovement : MonoBehaviour
         // Apply the new scale to the player's Transform component
         transform.localScale = newScale;
         scaleVector = newScale;
-        // Print a message to the console to indicate the scaling
-        Debug.Log("Player scaled to: " + newScale);
     }
 }

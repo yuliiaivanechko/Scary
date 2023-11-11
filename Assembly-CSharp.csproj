@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
+     <Compile Include="Assets/Scripts/IsometricPlayerMovement.cs" />
+     <Compile Include="Assets/Scripts/Collision.cs" />
      <None Include="Assets/Textures/Isometric Blocks/Spritesheet/platformerTiles_sheet.xml" />
      <None Include="Assets/Textures/Isometric Blocks/Spritesheet/allTiles_sheet.xml" />
      <None Include="Assets/Textures/Isometric Buildings/License.txt" />
@@ -813,6 +815,12 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
         <HintPath>/Users/yuliania/Documents/programming/Unity/Game/Scary/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>/Users/yuliania/Documents/programming/Unity/Game/Scary/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>/Users/yuliania/Documents/programming/Unity/Game/Scary/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
