@@ -11,14 +11,18 @@ public class IsometricPlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 2f;
     [SerializeField] float jumpSpeed = 2f;
     float myGravityScale = 0.0f;
+    bool isAlive = true;
 
     float scaleMultiplier = 0.3f;
     Vector2 scaleVector;
+
+    private CapsuleCollider2D myCapsuleCollider;
     Animator myAnimator;
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         ScalePlayer();
         myAnimator = GetComponent<Animator>();
     }
@@ -26,9 +30,12 @@ public class IsometricPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
-        Jump();
-        FlipSprite();
+        if (isAlive)
+        {
+            Walk();
+            FlipSprite();
+            Hurt();
+        }
     }
 
     void OnMove(InputValue value)
@@ -36,12 +43,6 @@ public class IsometricPlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
-
-    void Jump()
-    {
-        bool playerIsInTheAir = Mathf.Abs(myRigidbody.velocity.y) > 1.0f;
-        myAnimator.SetBool("isJumping", playerIsInTheAir);
-    }
 
     void Walk()
     {
@@ -79,5 +80,18 @@ public class IsometricPlayerMovement : MonoBehaviour
         // Apply the new scale to the player's Transform component
         transform.localScale = newScale;
         scaleVector = newScale;
+    }
+
+    void Hurt()
+    {
+        if (myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        {
+            Debug.Log("Ohhhh");
+            myAnimator.SetBool("isHurt", true);
+        }
+        else
+        {
+            myAnimator.SetBool("isHurt", false);
+        }
     }
 }

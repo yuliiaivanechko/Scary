@@ -5,16 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - House
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Enemy
+  - 
   - Water
   - UI
   - Background
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 

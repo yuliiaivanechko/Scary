@@ -4305,9 +4305,9 @@ GameObject:
   - component: {fileID: 584654239}
   - component: {fileID: 584654238}
   - component: {fileID: 584654242}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Prigozhyn3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5412,9 +5412,9 @@ GameObject:
   - component: {fileID: 820148836}
   - component: {fileID: 820148835}
   - component: {fileID: 820148839}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: EnemyGirl3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6544,9 +6544,9 @@ GameObject:
   - component: {fileID: 921005465}
   - component: {fileID: 921005464}
   - component: {fileID: 921005468}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Enemy6
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7661,9 +7661,9 @@ GameObject:
   - component: {fileID: 1058283634}
   - component: {fileID: 1058283633}
   - component: {fileID: 1058283637}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: EnemyGirl
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7696,8 +7696,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.67, y: 3.68}
+  m_Offset: {x: -0.00000023841858, y: -0.038349867}
+  m_Size: {x: 2.1302, y: 4.8304963}
   m_Direction: 0
 --- !u!50 &1058283634
 Rigidbody2D:
@@ -8788,9 +8788,9 @@ GameObject:
   - component: {fileID: 1061260445}
   - component: {fileID: 1061260448}
   - component: {fileID: 1061260449}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8917,8 +8917,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.67, y: 3.68}
+  m_Offset: {x: 0, y: 0.03834963}
+  m_Size: {x: 2.5904007, y: 4.6770983}
   m_Direction: 0
 --- !u!114 &1061260449
 MonoBehaviour:
@@ -8934,7 +8934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 2
   jumpSpeed: 2
-  SpawnTime: 2
+  SpawnTime: 5
   scaleVector: {x: 0, y: 0}
   elapsedTime: 0
 --- !u!1 &1212299837
@@ -8951,9 +8951,9 @@ GameObject:
   - component: {fileID: 1212299840}
   - component: {fileID: 1212299839}
   - component: {fileID: 1212299843}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Prigozhyn2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11680,9 +11680,9 @@ GameObject:
   - component: {fileID: 1440113871}
   - component: {fileID: 1440113870}
   - component: {fileID: 1440113874}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Enemy4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12856,9 +12856,9 @@ GameObject:
   - component: {fileID: 1636574704}
   - component: {fileID: 1636574705}
   - component: {fileID: 1636574706}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Prigozhyn
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12964,8 +12964,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08033848, y: 0}
-  m_Size: {x: 2.6106768, y: 3.62}
+  m_Offset: {x: 0.07306123, y: 0.038348913}
+  m_Size: {x: 2.3038774, y: 4.463698}
   m_Direction: 0
 --- !u!95 &1636574705
 Animator:
@@ -99096,9 +99096,9 @@ GameObject:
   - component: {fileID: 1992567050}
   - component: {fileID: 1992567049}
   - component: {fileID: 1992567053}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: EnemyGirl2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

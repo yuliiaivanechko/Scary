@@ -45,7 +45,6 @@ public class EnemyMovement : MonoBehaviour
         {
             elapsedTime = 0;
             MakeVisible();
-
             enemyAnimator.SetBool("isAttacking", true);
             direction = Random.insideUnitCircle.normalized;
         }
@@ -62,6 +61,7 @@ public class EnemyMovement : MonoBehaviour
     {
         enemyRenderer.enabled = true;
         capsuleCollider.enabled = true;
+        enemyAnimator.SetBool("isAppearing", true);
     }
 
     // Update is called once per frame
