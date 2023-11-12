@@ -39,6 +39,7 @@
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
      <Compile Include="Assets/Scripts/IsometricPlayerMovement.cs" />
      <Compile Include="Assets/Scripts/Collision.cs" />
+     <Compile Include="Assets/Scripts/EnemyMovement.cs" />
      <None Include="Assets/Textures/Isometric Blocks/Spritesheet/platformerTiles_sheet.xml" />
      <None Include="Assets/Textures/Isometric Blocks/Spritesheet/allTiles_sheet.xml" />
      <None Include="Assets/Textures/Isometric Buildings/License.txt" />
