@@ -8,7 +8,7 @@ public class IsometricPlayerMovement : MonoBehaviour
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
-    [SerializeField] float runSpeed = 2f;
+    [SerializeField] float runSpeed = 3f;
     [SerializeField] float jumpSpeed = 2f;
     float myGravityScale = 0.0f;
     bool isAlive = true;
@@ -17,7 +17,19 @@ public class IsometricPlayerMovement : MonoBehaviour
     Vector2 scaleVector;
 
     private CapsuleCollider2D myCapsuleCollider;
+    bool isAttacking = false;
     Animator myAnimator;
+
+    [SerializeField] int EnemyCount = 9;
+    void CheckEnemiesStatus()
+    {
+        EnemyCount--;
+        if (EnemyCount == 0)
+        {
+            Debug.Log("You win");
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +37,7 @@ public class IsometricPlayerMovement : MonoBehaviour
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         ScalePlayer();
         myAnimator = GetComponent<Animator>();
+        EnemyDeathEvent.OnEnemyDeath += CheckEnemiesStatus;
     }
 
     // Update is called once per frame
@@ -35,13 +48,40 @@ public class IsometricPlayerMovement : MonoBehaviour
             Walk();
             FlipSprite();
             Hurt();
+            CheckIfAttacking();
         }
     }
+    void CheckIfAttacking()
+    {
+        if (isAttacking)
+        {
+            AnimatorStateInfo stateInfo = myAnimator.GetCurrentAnimatorStateInfo(0);
 
+            // Check if the "isAttacking" parameter is still true in the animator
+            if (myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            {
+                // Fire animation has ended, start walking animation
+                myAnimator.SetBool("isAttacking", false);
+                myAnimator.SetBool("IsWalking", true);
+                isAttacking = false; // Reset the attacking flag
+            }
+        }
+    }
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
     }
+
+    void OnFire(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Debug.Log("Attack started");
+            myAnimator.SetBool("isAttacking", true);
+            isAttacking = true;
+        }
+    }
+
 
 
     void Walk()

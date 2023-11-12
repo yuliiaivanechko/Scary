@@ -19,23 +19,58 @@ public class EnemyMovement : MonoBehaviour
     float changeDirectionInterval = 3f;
 
     private CapsuleCollider2D capsuleCollider;
-
+    private bool isHurt = false;
+    private bool isDead = false;
+    private bool died = false;
     Vector2 direction;
     float scaleMultiplier = 0.8f;
+    float timeToInvisible = 2f;
+    bool appearing = false;
 
     Animator enemyAnimator;
+    [SerializeField] private GameObject Blood;
     // Start is called before the first frame update
     void Start()
     {
         enemyBody = GetComponent<Rigidbody2D>();
-        ScaleEnemy();
         enemyAnimator = GetComponent<Animator>();
         enemyRenderer = GetComponent<Renderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
-
+        ScaleEnemy();
         // Make the enemy invisible
         MakeInvisible();
     }
+
+    void CheckIfHurt()
+    {
+        if (isHurt)
+        {
+            AnimatorStateInfo stateInfo = enemyAnimator.GetCurrentAnimatorStateInfo(0);
+            // Check if the "isAttacking" parameter is still true in the animator
+            if (enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Hurt"))
+            {
+                // Fire animation has ended, start walking animation
+                enemyAnimator.SetBool("isHurt", false);
+                enemyAnimator.SetBool("isDead", true);
+                elapsedTime = 0;
+                isDead = true;
+            }
+        }
+    }
+
+    void Die()
+    {
+        if (isDead)
+        {
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime > timeToInvisible)
+            {
+                EnemyDeathEvent.TriggerEnemyDeath();
+                died = true;
+            }
+        }
+    }
+
 
     void Spawn()
     {
@@ -44,8 +79,15 @@ public class EnemyMovement : MonoBehaviour
         if (elapsedTime > SpawnTime)
         {
             elapsedTime = 0;
-            MakeVisible();
-            enemyAnimator.SetBool("isAttacking", true);
+            if (!enemyRenderer.enabled)
+            {
+                MakeVisible();
+                appearing = true;
+            }
+            if (enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Spawn 0"))
+            {
+                enemyAnimator.SetBool("isAttacking", true);
+            }
             direction = Random.insideUnitCircle.normalized;
         }
     }
@@ -67,9 +109,18 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
-        Spawn();
-        FlipSprite();
+        if (!died)
+        {
+            CheckIfHurt();
+            Die();
+        }
+        if (!isHurt)
+        {
+            Walk();
+            Spawn();
+            FlipSprite();
+            Hurt();
+        }
     }
 
 
@@ -96,6 +147,17 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    void Hurt()
+    {
+        if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Weapon")))
+        {
+            Instantiate(Blood, transform.position, Quaternion.identity);
+            enemyAnimator.SetBool("isHurt", true);
+            isHurt = true;
+        }
+
+    }
+
     void ScaleEnemy()
     {
         // Get the current scale of the player
@@ -103,7 +165,6 @@ public class EnemyMovement : MonoBehaviour
 
         // Multiply the current scale by the scaleMultiplier
         Vector2 newScale = new Vector2(currentScale.x * scaleMultiplier, currentScale.y * scaleMultiplier);
-
         // Apply the new scale to the player's Transform component
         transform.localScale = newScale;
         scaleVector = newScale;

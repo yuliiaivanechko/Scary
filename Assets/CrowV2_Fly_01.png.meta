@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a0135ce3f930945479df756581f8a7a0
+guid: 40e82b2f564884d57861cb502323da91
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 75
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -141,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hurt5-imageonline.co-merged_0
+      name: CrowV2_Fly_01_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 156
-        height: 325
+        x: 43
+        y: 1875
+        width: 618
+        height: 522
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7533966e679134dcab8aef90a70869fe
-      internalID: 394326301
+      spriteID: d7d698f900d4349e6bed545a1d3a6d54
+      internalID: -1115855930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt5-imageonline.co-merged_1
+      name: CrowV2_Fly_01_1
       rect:
         serializedVersion: 2
-        x: 155
-        y: 0
-        width: 200
-        height: 325
+        x: 740
+        y: 1878
+        width: 618
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28e4fd678a3d34efb8e023121047fe59
-      internalID: 834922636
+      spriteID: c27f1cd7ee3174c25831fa5196e1731d
+      internalID: -85140342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt5-imageonline.co-merged_2
+      name: CrowV2_Fly_01_2
       rect:
         serializedVersion: 2
-        x: 354
-        y: 0
-        width: 289
-        height: 325
+        x: 1437
+        y: 1881
+        width: 618
+        height: 326
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a23d63f5e17bc46d2abbc3862d09373b
-      internalID: -681231356
+      spriteID: fb2812a4d0a2c4db2909b15130e4c43e
+      internalID: -467263193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt5-imageonline.co-merged_3
+      name: CrowV2_Fly_01_3
       rect:
         serializedVersion: 2
-        x: 642
-        y: 0
-        width: 233
-        height: 325
+        x: 2134
+        y: 1721
+        width: 618
+        height: 485
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b5114f0bd2de48c2a32309f701d73ca
-      internalID: 1671936199
+      spriteID: e6ab378d9ac194bd6bb5eba6b5731666
+      internalID: 589418138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt5-imageonline.co-merged_4
+      name: CrowV2_Fly_01_4
       rect:
         serializedVersion: 2
-        x: 874
-        y: 4
-        width: 166
-        height: 321
+        x: 43
+        y: 917
+        width: 616
+        height: 490
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91b777efc5e5941a488006421d2d406a
-      internalID: -1464308324
+      spriteID: 1b5e22e08cb30460e8c47a6becd4a88d
+      internalID: -290787203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt5-imageonline.co-merged_5
+      name: CrowV2_Fly_01_5
       rect:
         serializedVersion: 2
-        x: 1002
-        y: 0
-        width: 12
-        height: 4
+        x: 740
+        y: 913
+        width: 615
+        height: 493
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +260,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45f8f3084949e4c2785052e36f69ff85
-      internalID: 1524310877
+      spriteID: d452fae1232094a898567b966d75e4b6
+      internalID: 13028680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrowV2_Fly_01_6
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 1012
+        width: 615
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a56a055ef509430e840e30155fcdbf1
+      internalID: 1940740536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrowV2_Fly_01_7
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 1087
+        width: 615
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2baff354a72604447bc703a3d9f3cd48
+      internalID: 753916998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrowV2_Fly_01_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 288
+        width: 617
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5966004f8a7384ee9a530f2284c40e7d
+      internalID: 1369420436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrowV2_Fly_01_9
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 284
+        width: 617
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce4fa2a63d0c43eb849722e10e6ec0e
+      internalID: -654492432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrowV2_Fly_01_10
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 281
+        width: 618
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370d17d084d3c43d8905c367ef149451
+      internalID: -135958671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrowV2_Fly_01_11
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 278
+        width: 618
+        height: 516
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4359e93fa799f41708bd2030752178bb
+      internalID: -2035290023
       vertices: []
       indices: 
       edges: []
@@ -277,12 +403,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hurt5-imageonline.co-merged_0: 394326301
-      Hurt5-imageonline.co-merged_1: 834922636
-      Hurt5-imageonline.co-merged_2: -681231356
-      Hurt5-imageonline.co-merged_3: 1671936199
-      Hurt5-imageonline.co-merged_4: -1464308324
-      Hurt5-imageonline.co-merged_5: 1524310877
+      CrowV2_Fly_01_0: -1115855930
+      CrowV2_Fly_01_1: -85140342
+      CrowV2_Fly_01_10: -135958671
+      CrowV2_Fly_01_11: -2035290023
+      CrowV2_Fly_01_2: -467263193
+      CrowV2_Fly_01_3: 589418138
+      CrowV2_Fly_01_4: -290787203
+      CrowV2_Fly_01_5: 13028680
+      CrowV2_Fly_01_6: 1940740536
+      CrowV2_Fly_01_7: 753916998
+      CrowV2_Fly_01_8: 1369420436
+      CrowV2_Fly_01_9: -654492432
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
