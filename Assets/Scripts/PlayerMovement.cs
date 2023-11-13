@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         ScalePlayer();
         myAnimator = GetComponent<Animator>();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
     }
 
     // Update is called once per frame

@@ -15,16 +15,22 @@ public class CrowFly : MonoBehaviour
     Vector2 direction;
     float scaleMultiplier = 1f;
     float elapsedTime = 0.0f;
+    float soundTime = 0.0f;
+    float timeToSound = 23f;
 
     Animator enemyAnimator;
     [SerializeField] private GameObject Blood;
+    AudioSource m_MyAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         crowBody = GetComponent<Rigidbody2D>();
         ScaleCrow();
+        m_MyAudioSource = GetComponent<AudioSource>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         direction = Random.insideUnitCircle.normalized;
+        m_MyAudioSource.Play();
         // Make the enemy invisible
     }
 
@@ -35,6 +41,18 @@ public class CrowFly : MonoBehaviour
         if (elapsedTime > changeDirectionTime)
         {
             elapsedTime = 0;
+            direction = Random.insideUnitCircle.normalized;
+        }
+    }
+
+    void Sound()
+    {
+        soundTime += Time.deltaTime;
+
+        if (soundTime > timeToSound)
+        {
+            soundTime = 0;
+            m_MyAudioSource.Play();
         }
     }
 
@@ -45,6 +63,7 @@ public class CrowFly : MonoBehaviour
         Fly();
         FlipSprite();
         Direction();
+        Sound();
     }
 
 

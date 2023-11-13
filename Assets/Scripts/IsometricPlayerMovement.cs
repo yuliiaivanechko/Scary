@@ -21,6 +21,7 @@ public class IsometricPlayerMovement : MonoBehaviour
     Animator myAnimator;
 
     [SerializeField] int EnemyCount = 9;
+    [SerializeField] private AudioClip audioSound;
     void CheckEnemiesStatus()
     {
         EnemyCount--;
@@ -38,6 +39,7 @@ public class IsometricPlayerMovement : MonoBehaviour
         ScalePlayer();
         myAnimator = GetComponent<Animator>();
         EnemyDeathEvent.OnEnemyDeath += CheckEnemiesStatus;
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
     }
 
     // Update is called once per frame
@@ -62,6 +64,7 @@ public class IsometricPlayerMovement : MonoBehaviour
             {
                 // Fire animation has ended, start walking animation
                 myAnimator.SetBool("isAttacking", false);
+                AudioSource.PlayClipAtPoint(audioSound, Camera.main.transform.position);
                 myAnimator.SetBool("IsWalking", true);
                 isAttacking = false; // Reset the attacking flag
             }
@@ -126,8 +129,9 @@ public class IsometricPlayerMovement : MonoBehaviour
     {
         if (myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
         {
-            Debug.Log("Ohhhh");
             myAnimator.SetBool("isHurt", true);
+            //AudioSource.PlayClipAtPoint(isHurt, Camera.main.transform.position);
+
         }
         else
         {
