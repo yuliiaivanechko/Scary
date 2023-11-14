@@ -18,7 +18,7 @@ TagManager:
   - Player
   - Enemy
   - Weapon
-  - 
+  - Blood
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: Weapon
     uniqueID: 737181429
+    locked: 0
+  - name: Blood
+    uniqueID: 957847519
     locked: 0

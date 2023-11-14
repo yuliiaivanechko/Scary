@@ -92,7 +92,6 @@ public class CrowFly : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("crow");
         direction = Random.insideUnitCircle.normalized;
     }
 

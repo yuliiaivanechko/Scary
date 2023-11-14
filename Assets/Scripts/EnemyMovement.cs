@@ -112,8 +112,9 @@ public class EnemyMovement : MonoBehaviour
             {
                 m_MyAudioSource.Play();
                 enemyAnimator.SetBool("isAttacking", true);
+                direction = Random.insideUnitCircle.normalized;
             }
-            direction = Random.insideUnitCircle.normalized;
+
         }
     }
 
@@ -177,7 +178,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Weapon")))
         {
-            Instantiate(Blood, transform.position, Quaternion.identity);
+            Instantiate(Blood, enemyBody.position, Quaternion.identity);
+            capsuleCollider.size = capsuleCollider.size / 2;
             enemyAnimator.SetBool("isHurt", true);
             isHurt = true;
         }
