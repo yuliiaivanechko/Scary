@@ -17952,5 +17952,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 7788006985250049577, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+      propertyPath: m_TagString
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788006985250049579, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
