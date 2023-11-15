@@ -2090,6 +2090,18 @@ PolygonCollider2D:
       - {x: -1.2411733, y: -3.1425457}
       - {x: 0.9611517, y: -3.7959344}
       - {x: 16.352352, y: 4.1360073}
+--- !u!114 &119127074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119127072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22244d79e334a47a8a0836d851d67d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &180381830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,11 +3357,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7788006985250049577, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
       propertyPath: m_Name
-      value: Music
+      value: OMFO
       objectReference: {fileID: 0}
     - target: {fileID: 7788006985250049577, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
       propertyPath: m_TagString
-      value: Music
+      value: OMFO
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788006985250049579, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7788006985250049579, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
       propertyPath: m_Volume
@@ -3360,10 +3376,16 @@ PrefabInstance:
       value: 2.2134361
       objectReference: {fileID: 0}
     - target: {fileID: 7788006985250049579, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 58f71af95980a4653b56317b3c3b7031, type: 3}
+    - target: {fileID: 7788006985250049579, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7788006985250049578, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+    - {fileID: 919258902286467686, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
 --- !u!1 &496844323
 GameObject:
@@ -6473,9 +6495,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 376528594923603900, guid: 49b5ca04b07ad4b449de16a4f2d60456, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 33510ab1a9c5647f49491c7faeeb3b60, type: 2}
     - target: {fileID: 376528594923603901, guid: 49b5ca04b07ad4b449de16a4f2d60456, type: 3}
       propertyPath: m_Name
-      value: LevelChanger
+      value: LevelChangerScene3
+      objectReference: {fileID: 0}
+    - target: {fileID: 376528594923603901, guid: 49b5ca04b07ad4b449de16a4f2d60456, type: 3}
+      propertyPath: m_TagString
+      value: Load1Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b5ca04b07ad4b449de16a4f2d60456, type: 3}

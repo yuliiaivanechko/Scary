@@ -27,7 +27,8 @@ public class IsometricPlayerMovement : MonoBehaviour
         EnemyCount--;
         if (EnemyCount == 0)
         {
-            Debug.Log("You win");
+            GameObject.FindGameObjectWithTag("OMFO").GetComponent<MusicClass>().StopMusic();
+            GameObject.FindGameObjectWithTag("Load1Scene").GetComponent<LevelChangerScript>().FadeIntoLevel(3);
         }
     }
 
@@ -39,7 +40,7 @@ public class IsometricPlayerMovement : MonoBehaviour
         ScalePlayer();
         myAnimator = GetComponent<Animator>();
         EnemyDeathEvent.OnEnemyDeath += CheckEnemiesStatus;
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+        GameObject.FindGameObjectWithTag("OMFO").GetComponent<MusicClass>().PlayMusic();
     }
 
     // Update is called once per frame

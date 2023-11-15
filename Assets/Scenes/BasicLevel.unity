@@ -269,7 +269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.940862, y: -1.4594676, z: -12}
+  m_LocalPosition: {x: -8.775327, y: -1.8399844, z: -12}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17894,9 +17894,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 376528594923603900, guid: 49b5ca04b07ad4b449de16a4f2d60456, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 33510ab1a9c5647f49491c7faeeb3b60, type: 2}
     - target: {fileID: 376528594923603901, guid: 49b5ca04b07ad4b449de16a4f2d60456, type: 3}
       propertyPath: m_Name
-      value: LevelChanger
+      value: LevelChangerScene2
       objectReference: {fileID: 0}
     - target: {fileID: 376528594923603901, guid: 49b5ca04b07ad4b449de16a4f2d60456, type: 3}
       propertyPath: m_IsActive
@@ -18085,13 +18089,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
-    - target: {fileID: 7788006985250049577, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
-      propertyPath: m_TagString
-      value: Music
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788006985250049579, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 919258902286467686, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+--- !u!1 &7788006984867551902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7788006985250049577, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+  m_PrefabInstance: {fileID: 7788006984867551901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7788006984867551903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788006984867551902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22244d79e334a47a8a0836d851d67d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

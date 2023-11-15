@@ -13,7 +13,9 @@ public class Collision : MonoBehaviour
         if (other.gameObject.CompareTag("House"))
         {
             Debug.Log("Collided with a House object.");
-            GameObject.FindGameObjectWithTag("Enemy").GetComponent<LevelChangerScript>().FadeIntoLevel(1);
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().StopMusic();
+            GameObject.FindGameObjectWithTag("Enemy").GetComponent<LevelChangerScript>().FadeIntoLevel(2);
+
         }
     }
 }

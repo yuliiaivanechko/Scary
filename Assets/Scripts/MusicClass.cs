@@ -10,11 +10,13 @@ public class MusicClass : MonoBehaviour
     {
         DontDestroyOnLoad(transform.gameObject);
         _audioSource = GetComponent<AudioSource>();
+
     }
 
     public void PlayMusic()
     {
         if (_audioSource.isPlaying) return;
+        Debug.Log("Starting new");
         _audioSource.Play();
     }
 

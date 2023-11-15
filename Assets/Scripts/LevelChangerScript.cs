@@ -29,4 +29,9 @@ public class LevelChangerScript : MonoBehaviour
     {
         SceneManager.LoadScene(levelIndex);
     }
+
+    public void OnGameComplete()
+    {
+        //Application.Quit();
+    }
 }
