@@ -642,6 +642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 7788006985250049579, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bd7940db929a54bf0a84505943274ac6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66929c2b36a7e4021bff54bb52bb0e08, type: 3}
 --- !u!1 &2077806467
